@@ -1,2 +1,2 @@
 # local-jenkins
-See: (./docker-compose.yml)[./docker-compose.yml]
+See: [./docker-compose.yml](./docker-compose.yml)
