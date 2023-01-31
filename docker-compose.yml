@@ -1,0 +1,15 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:lts-jdk17
+    ports:
+      - 8111:8080
+      - 50000:50000
+    environment:
+      JAVA_OPTS: "-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true"
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - C:/Users/mariano.mertinat/IdeaProjects:/repos:ro
+    restart: always
+
+volumes:
+  jenkins-data:
